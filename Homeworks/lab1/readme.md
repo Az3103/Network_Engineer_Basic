@@ -86,4 +86,26 @@ copy running-config startup-config
 
 
 
-3. 
+3. Проверяем конфигурацию коммутатора:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab01_screen2.png)
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab01_screen3.png)
+
+Затем смотрим свойства VLAN1:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab01_screen4.png)
+
+Далее тестируем ping:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab01_screen5.png)
+
+И наконец проверяем удаленное соединение:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab01_screen6.png)
+
+
+Настраивать пароль для VTY необходимо, так как по умолчанию виртуальные каналы не защищены. Чтобы пароли отправлялись в зашифрованном виде, необходимо использовать протокол SSH.
+
+
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab01.pkt)
