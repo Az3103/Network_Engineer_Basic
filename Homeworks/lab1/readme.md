@@ -1,6 +1,6 @@
 # Команды IOS. Базовая конфигурация устройств.
 
-![alt-текст]
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab1_screen1.png "Топология")
 
 ###  Задачи:
 
