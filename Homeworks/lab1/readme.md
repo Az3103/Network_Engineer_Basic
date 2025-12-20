@@ -71,13 +71,14 @@ ip address 192.168.1.20 255.255.255.0
 no shutdown
 exit
 line console 0
-logging synchronos
+logging synchronous
 password cisco
 login
 line vty 0 15
 password cisco
 login
 transport input telnet
+exit
 exit
 copy running-config startup-config
 ```
