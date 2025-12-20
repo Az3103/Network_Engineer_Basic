@@ -70,3 +70,10 @@ copy running-config startup-config
 2. Теперь изучим таблицы MAC-адресов коммутаторов:
 
 
+С помощью команды ipconfig /all в командной строке компьютеров - изучим физические адреса Ethernet и проверим айпи-адреса.
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab02/lab02_screen02.png)
+
+С помощью команды show interface f0/1 в консоли коммутаторов - изучим мак-адреса коммутаторов.
+
+
