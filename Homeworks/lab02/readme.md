@@ -76,4 +76,8 @@ copy running-config startup-config
 
 С помощью команды show interface f0/1 в консоли коммутаторов - изучим мак-адреса коммутаторов.
 
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab02/lab02_screen03.png)
 
+Командой show mac address-table в привилегированном режиме консоли коммутатора выводим таблицу мак-адресов. Изначально там есть только мак другого коммутатора, присоединенного к первому порту. Однако после команды ping - появляется мак подключенного компьютера.
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab02/lab02_screen04.png)
