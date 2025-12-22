@@ -87,4 +87,6 @@ copy running-config startup-config
 После посыла эхо запросов всем устройствам в сети - команда arp -a в командной строке компьютера выводит мак-адреса компьютеров и коммутатора, подключенного к этому пк. На коммутаторе же команда show mac address-table выводит все маки коммутаторов и пк, на которые были отправлены эхо запросы.
 
 
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab02/lab02_screen05.png)
+
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab02.pkt)
