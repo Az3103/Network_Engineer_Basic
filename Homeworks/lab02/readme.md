@@ -89,4 +89,8 @@ copy running-config startup-config
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab02/lab02_screen5.png)
 
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab02/lab02_screen06.png)
+
+
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab1/lab02.pkt)
