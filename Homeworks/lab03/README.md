@@ -11,7 +11,7 @@
 
 ### Решение:
 
-![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab03/lab03_screen01.png)
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab03/lab03_screen01.png)  
 
 
   
