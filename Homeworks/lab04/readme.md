@@ -46,6 +46,7 @@ enable secret class
 banner motd #
 DO NOT ENTER! #
 interface vlan1
+ipv6 address 2001:db8:acad:1::b/64
 no shutdown
 exit
 line console 0
