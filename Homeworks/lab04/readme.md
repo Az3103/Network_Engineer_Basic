@@ -24,3 +24,43 @@
 1. **Настройка топологии и конфигурация основных параметров маршрутизатора и коммутатора;**
 2. **Ручная настройка IPv6-адресов;**
 3. **Проверка сквозного соединения;**
+
+
+
+### Решение:
+
+1. Настроим основные параметры оборудования и соединения согласно топологии. Начнем с коммутатора:
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname S1
+sdm prefer dual-ipv4-and-ipv6 default
+end
+reload
+enable
+configure terminal
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER! #
+interface vlan1
+no shutdown
+exit
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+transport input telnet
+exit
+exit
+copy running-config startup-config
+```
+
+После настройки проверим себя командой show sdm prefer:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab04/lab04_screen02.png)
