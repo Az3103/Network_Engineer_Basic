@@ -48,6 +48,7 @@ DO NOT ENTER! #
 interface vlan1
 ipv6 address 2001:db8:acad:1::b/64
 no shutdown
+ipv6 address fe80::b link-local
 exit
 line console 0
 logging synchronous
