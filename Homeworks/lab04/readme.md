@@ -64,3 +64,25 @@ copy running-config startup-config
 После настройки проверим себя командой show sdm prefer:
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab04/lab04_screen02.png)
+
+
+
+Продолжим настройками маршрутизатора. Пропишем ipv6 адреса на интерфейсы:
+
+```
+enable
+configure terminal
+hostname R1
+interface gigabitEthernet 0/0/0
+ipv6 address 2001:db8:acad:a::1/64
+no shutdown
+ipv6 address fe80::1 link-local
+interface gigabitEthernet 0/0/1
+ipv6 address 2001:db8:acad:1::1/64
+no shutdown
+ipv6 address fe80::1 link-local
+end
+show ipv6 interface brief 
+```
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab04/lab04_screen03.png)
