@@ -88,3 +88,9 @@ show ipv6 interface brief
 ```
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab04/lab04_screen03.png)
+
+
+
+После указания ipv6 адреса и локального адреса канала на интерфейс управления S1 - проверяем правильность назначения с помощью команды show ipv6 interface vlan 1:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab04/lab04_screen04.png)
