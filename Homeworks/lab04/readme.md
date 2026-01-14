@@ -96,4 +96,11 @@ show ipv6 interface brief
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab04/lab04_screen04.png)
 
 
+
+
+Далее с помощью эхо-запросов и команды tracert - проверяем сквозное соединение:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab04/lab04_screen06.png)
+
+
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab04/lab04.pkt)
