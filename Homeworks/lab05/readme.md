@@ -122,3 +122,6 @@ copy running-config startup-config
 4.	Настроим протокол SSH с использованием интерфейса командной строки (CLI) коммутатора:
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab05/lab05_screen05.png "Топология")
+
+
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab05/lab05.pkt)
