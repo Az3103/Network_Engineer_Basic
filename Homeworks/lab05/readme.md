@@ -54,3 +54,7 @@ exit
 exit
 copy running-config startup-config
 ```
+
+Указываем на ПК его айпи адрес, маску подсети и шлюз по умолчанию, согласно таблицы адресации. Теперь отправим эхо запрос с ПК на маршрутизатор:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab05/lab05_screen02.png "Топология")
