@@ -76,3 +76,41 @@ login local
 Далее пробуем установить SSH соединение роутера и пк. Для этого в SSH Client введем имя пользователя и айпи адрес маршрутизатора.
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab05/lab05_screen03.png "Топология")
+
+
+
+
+3. Настроим коммутатор для доступа по протоколу SSH:
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname S1
+ip domain-name BobrKurwa.com
+crypto key generate rsa           ''1024-2048''
+username admin password Adm1nP@55
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER! #
+interface vlan1
+ip address 192.168.1.11 255.255.255.0
+no shutdown
+exit
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+transport input ssh
+login local
+exit
+exit
+copy running-config startup-config
+```
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab05/lab05_screen04.png "Топология")
