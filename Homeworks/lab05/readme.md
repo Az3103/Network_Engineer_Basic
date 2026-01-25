@@ -58,3 +58,21 @@ copy running-config startup-config
 Указываем на ПК его айпи адрес, маску подсети и шлюз по умолчанию, согласно таблицы адресации. Теперь отправим эхо запрос с ПК на маршрутизатор:
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab05/lab05_screen02.png "Топология")
+
+
+
+2. Настроим работу маршрутизатора для доступа по протоколу SSH:
+
+
+```
+ip domain-name Yapierdole.com
+crypto key generate rsa           ''1024-2048''
+username admin password Adm1nP@55
+line vty 0 15
+transport input all
+login local
+```
+
+Далее пробуем установить SSH соединение роутера и пк. Для этого в SSH Client введем имя пользователя и айпи адрес маршрутизатора.
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab05/lab05_screen03.png "Топология")
