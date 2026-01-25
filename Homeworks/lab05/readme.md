@@ -23,3 +23,34 @@
 2. **Настройка маршрутизатора для доступа по протоколу SSH;**
 3. **Настройка коммутатора для доступа по протоколу SSH;**
 4. **SSH через интерфейс командной строки (CLI) коммутатора;**
+
+
+### Решение:
+
+1. После создания сети согласно топологии - настроим маршрутизатор:
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname R1
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER! #
+interface G0/0/1
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+transport input ssh
+exit
+exit
+copy running-config startup-config
+```
