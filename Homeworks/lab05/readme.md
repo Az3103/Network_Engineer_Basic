@@ -113,4 +113,6 @@ copy running-config startup-config
 ```
 
 
+Теперь проверим SSH соединение между ПК и коммутатором. Для этого также вводим в SSH Client на ПК айпи адрес коммутатора и имя пользователя:
+
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab05/lab05_screen04.png "Топология")
