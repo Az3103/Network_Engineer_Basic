@@ -146,4 +146,31 @@ write memory
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab06/lab06_screen04.png)
 
 
+Если на маршрутизаторе будет отключен интерфейс  g 0/0/1, связи с маршрутизатором не будет.
+
+
+4. Настроим маршрутизацию между сетями VLAN. Ниже приведены настройки маршрутизатора и результаты проверки подинтерфейсов:
+
+```
+enable
+configure terminal
+interface g 0/0/1
+no shutdown
+interface g 0/0/1.10
+encapsulation dot1q 10
+ip address 192.168.10.1 255.255.255.0
+interface g 0/0/1.20
+encapsulation dot1q 20
+ip address 192.168.20.1 255.255.255.0
+interface g 0/0/1.30
+encapsulation dot1q 30
+ip address 192.168.30.1 255.255.255.0
+interface g 0/0/1.1000
+encapsulation dot1q 1000 native
+no ip address
+end
+copy running-config startup-config
+```
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab06/lab06_screen05.png)
 
