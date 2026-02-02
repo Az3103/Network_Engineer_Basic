@@ -45,3 +45,80 @@
 
 
 ### Решение:
+
+1. Создадим сеть согласно топологии. Укажем необходимую адресацию на ПК. Далее настроим основные параметры на маршрутизаторе и коммутаторах. Ниже пример настройки роутера:
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname R1
+ip domain-name bobr.com
+crypto key generate rsa           ''1024-2048''
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER!  #
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+login local
+transport input ssh
+ip ssh version 2
+exit
+exit
+copy running-config startup-config
+```
+
+
+2. Настроим VLAN и назначим порты коммутаторов. Неиспользуемые порты отключим административно. Ниже пример настроек коммутатора S1:
+
+
+```
+enable
+configure terminal
+ip default-gateway 192.168.10.1
+vlan 10
+name Management
+exit
+vlan 20
+name Sales
+exit
+vlan 999
+name Parking_Lot
+exit
+vlan 1000
+name Special
+exit
+interface vlan 10
+ip address 192.168.10.11 255.255.255.0
+no shutdown
+exit
+interface f0/1
+switchport mode access
+switchport access vlan 10
+exit
+interface f 0/6
+switchport mode access
+switchport access vlan 20
+exit
+interface range f0/2-4, f0/7-24, g0/1-2
+switchport mode access
+switchport sccess vlan 999
+shutdown
+exit
+```
+
+
+Проверим правильность конфигураций командой show vlan brief:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab06/lab06_screen02.png)
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab06/lab06_screen03.png)
+
+
