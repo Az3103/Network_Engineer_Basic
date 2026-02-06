@@ -94,4 +94,16 @@ exit
 
 3. Проверим работу протокола STP, поменяв стоимость портов:
 
+На коммутаторе с заблокированным портом изменим стоимость порта корневого моста
 
+```
+interface f 0/4
+spanning-tree vlan 1 cost 18
+//////////
+no spanning-tree vlan 1 cost 18
+exit
+```
+
+После смены стоимости порта - порты на коммутаторе S3 выглядят следующим образом:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab07/lab07_screen06.png)
