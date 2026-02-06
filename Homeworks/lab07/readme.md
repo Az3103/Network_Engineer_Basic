@@ -126,3 +126,9 @@ no shutdown
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab07/lab07_screen08.png)
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab07/lab07_screen09.png)
+
+
+После выбора корневого моста протокол STP учитывает стоимость портов. Если она идентична - сравнивается BID. Далее учитывается приоритет порта. Наиболее низкий номер порта имеет наиболее высокий приоритет.
+
+
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab07/lab07.pkt)
