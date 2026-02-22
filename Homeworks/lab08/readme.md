@@ -80,3 +80,24 @@ copy running-config startup-config
 
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen02.png)
+
+
+
+
+
+
+
+2.  Указав автоматическую настройку ipv6 на хосте PC-A, проверим результат командой ipconfig:
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen03.png)
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen04.png)
+
+
+
+Часть с идентификатором хоста берется из его мак адреса.
+
+
+
+
