@@ -100,7 +100,20 @@ copy running-config startup-config
 
 
 
-3.
+3. Настроим R1 для предоставления DHCPv6 без состояния для PC-A:
 
+```
+configure terminal
+ipv6 dhcp pool R1-STATELESS
+dns-server 2001:db8:acad::1
+domain-name STATELESS.com
+interface g 0/0/1
+ipv6 nd other-config-flag
+ipv6 dhcp server R1-STATELESS
+```
+
+Проверим результат командой ipconfig /all:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen05.png)
 
 
