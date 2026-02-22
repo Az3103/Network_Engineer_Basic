@@ -117,3 +117,6 @@ ipv6 dhcp server R1-STATELESS
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen05.png)
 
 
+Так же пингуем интерфейс g 0/0/1 на R2:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen06.png)
