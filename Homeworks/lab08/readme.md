@@ -148,3 +148,8 @@ ipv6 dhcp server R1-STATEFUL
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen08.png)
 
+
+
+
+
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08.pkt)
