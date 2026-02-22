@@ -120,3 +120,22 @@ ipv6 dhcp server R1-STATELESS
 Так же пингуем интерфейс g 0/0/1 на R2:
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen06.png)
+
+
+
+
+4. Настроим R1 для ответа на запросы DHCPv6 от локальной сети на R2:
+
+
+
+```
+configure terminal
+ipv6 dhcp pool R1-STATEFUL
+address prefix 2001:db8:acad:3:aaa::/80
+dns-server 2001:db8:acad::254
+domain-name STATEFUL.com
+interface g 0/0/0
+ipv6 dhcp server R1-STATEFUL
+```
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen07.png)
