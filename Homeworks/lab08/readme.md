@@ -139,3 +139,12 @@ ipv6 dhcp server R1-STATEFUL
 ```
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen07.png)
+
+
+
+5. Настроим и проверим ретрансляцию DHCPv6 на R2, позволяя PC-B получать адрес IPv6:
+
+При проверке SLAAC на PC-B все корректно.
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08/lab08_screen08.png)
+
