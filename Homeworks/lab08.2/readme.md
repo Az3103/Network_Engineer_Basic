@@ -42,3 +42,52 @@
 
 
 
+1. Настроим основные параметры маршрутизаторов:
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname R1
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER!  #
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+transport input ssh
+exit
+exit
+copy running-config startup-config
+```
+
+
+Далее включим и настроим интерфейсы маршрутизаторов:
+
+
+```
+enable
+configure terminal
+interface g 0/0/1
+no shutdown
+interface g 0/0/1.10
+encapsulation dot1q 10
+ip address 192.168.10.1 255.255.255.0
+interface g 0/0/1.20
+encapsulation dot1q 20
+ip address 192.168.20.1 255.255.255.0
+interface g 0/0/1.30
+encapsulation dot1q 30
+ip address 192.168.30.1 255.255.255.0
+interface g 0/0/1.1000
+encapsulation dot1q 1000 native
+no ip address
+end
+copy running-config startup-config
+```
+
