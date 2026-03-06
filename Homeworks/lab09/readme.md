@@ -128,6 +128,11 @@ configure terminal
 interface f 0/1
 switchport mode trunk
 switchport trunk native vlan 333
+switchport nonegotiate
 ```
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen03.png)
+
+Проверим согласование DTP:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen04.png)
