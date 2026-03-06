@@ -133,7 +133,7 @@ switchport nonegotiate
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen03.png)
 
-Настроим порты доступа на обоих коммутаторах. Также отключим неиспользуемые порты.
+Настроим порты доступа на обоих коммутаторах. Также отключим неиспользуемые порты. Проверим результат командой show interfaces status.
 
 ```
 enable
@@ -150,3 +150,14 @@ exit
 ```
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen04.png)
+
+
+
+Настроим безопасность портов на портах доступа:
+
+Параметры безопасности порта f 0/6 на S1 по умолчанию приведены ниже.
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen05.png)
+
+
