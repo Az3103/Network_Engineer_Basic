@@ -120,7 +120,7 @@ exit
 ```
 3. Настроим безопасность коммутаторов:
 
-Сперва реализуем магистральное соединение на обоих коммутаторах. Проверим результат командой show interface trunk.
+Сперва реализуем магистральное соединение на обоих коммутаторах. Проверим результат командой show interface trunk. Также отключаем согласование DTP.
 
 ```
 enable
@@ -133,6 +133,20 @@ switchport nonegotiate
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen03.png)
 
-Проверим согласование DTP:
+Настроим порты доступа на обоих коммутаторах. Также отключим неиспользуемые порты.
+
+```
+enable
+configure terminal
+interface range f 0/5-6
+switchport mode access
+switchport access vlan 10
+exit
+interface range f 0/2-4, f 0/7-24, g 0/1-2
+switchport mode access
+switchport access vlan 999
+shutdown
+exit
+```
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen04.png)
