@@ -178,3 +178,24 @@ switchport port-security mac-address sticky
 Проверим результат на примере порта f 0/18 на коммутаторе S2.
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen06.png)
+
+
+Реализуем безопасность DHCP-snooping:
+
+```
+enable
+configure terminal
+ip dhcp snooping
+ip dhcp snooping vlan 10
+ip dhcp snooping information option
+interface f 0/1
+ip dhcp snooping trust
+interface f 0/18
+ip dhcp snooping limit rate 5
+```
+Проверим результат на S2 командами - show ip dhcp snooping и, после обновления айпи адреса на PC-B, командой show ip dhcp snooping binding.
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen07.png)
+
