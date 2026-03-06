@@ -199,3 +199,19 @@ ip dhcp snooping limit rate 5
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen07.png)
 
+
+
+Реализуем PortFast и BPDU Guard:
+
+```
+enable
+configure terminal
+interface f 0/5
+spanning-tree portfast
+interface f 0/6
+spanning-tree portfast
+spanning-tree bpduguard enable
+```
+Проверим правильность командой show running-config
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen08.png)
