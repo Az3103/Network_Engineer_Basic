@@ -215,3 +215,10 @@ spanning-tree bpduguard enable
 Проверим правильность командой show running-config
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen08.png)
+
+
+
+
+
+
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09.pkt)
