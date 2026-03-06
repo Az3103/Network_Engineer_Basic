@@ -161,3 +161,20 @@ exit
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen05.png)
 
 
+Настроим нужные параметры на портах.
+
+```
+enable
+configure terminal
+interface f 0/6
+switchport port-security
+switchport port-security maximum 3
+switchport port-security violation restrict
+switchport port-security aging time 60
+switchport port-security aging type                                      !!!!команда отсутствует в программе!!!!
+switchport port-security mac-address sticky
+```
+
+Проверим результат на примере порта f 0/18 на коммутаторе S2.
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab09/lab09_screen06.png)
