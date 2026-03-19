@@ -76,3 +76,7 @@ exit
 ```
 
 Проверим смежность:
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab10/lab10_screen02.png)
