@@ -84,3 +84,51 @@ exit
 
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab10/lab10_screen03.png)
+
+
+
+
+3. Оптимизируем и проверим конфигурации OSPFv2 для одной области. Сперва настроим оптимизацию на маршрутизаторах:
+
+
+```
+enable
+configure terminal
+interface G 0/0/1
+ip ospf priority 50
+ip ospf hello-interval 30
+exit
+ip route 0.0.0.0 0.0.0.0 Loopback1
+router ospf 56
+default-information originate
+auto-cost reference-bandwidth 10000
+end
+clear ip ospf process
+```
+
+
+
+
+
+
+```
+enable
+configure terminal
+interface G 0/0/1
+ip ospf hello-interval 30
+interface Loopback1
+ip ospf network point-to-point
+exit
+router ospf 56
+passive-interface Loopback1
+auto-cost reference-bandwidth 10000
+end
+clear ip ospf process
+```
+
+
+
+
+Теперь убедимся в реализации нашей оптимизации:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab10/lab10_screen04.png)
