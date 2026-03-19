@@ -132,3 +132,15 @@ clear ip ospf process
 Теперь убедимся в реализации нашей оптимизации:
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab10/lab10_screen04.png)
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab10/lab10_screen05.png)
+
+
+
+
+
+
+
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab10/lab10.pkt)
