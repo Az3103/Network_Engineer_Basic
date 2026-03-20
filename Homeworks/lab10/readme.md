@@ -97,6 +97,7 @@ configure terminal
 interface G 0/0/1
 ip ospf priority 50
 ip ospf hello-interval 30
+ip ospf dead-interval 120
 exit
 ip route 0.0.0.0 0.0.0.0 Loopback1
 router ospf 56
@@ -116,6 +117,7 @@ enable
 configure terminal
 interface G 0/0/1
 ip ospf hello-interval 30
+ip ospf dead-interval 120
 interface Loopback1
 ip ospf network point-to-point
 exit
