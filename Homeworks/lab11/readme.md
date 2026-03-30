@@ -135,12 +135,12 @@ configure terminal
 interface f 0/1
 switchport mode trunk
 switchport trunk native vlan 1000
-switchport trunk allowed vlan 10,20,30,1000
+switchport trunk allowed vlan 20,30,40,1000
 end
 interface f 0/5
 switchport mode trunk
 switchport trunk native vlan 1000
-switchport trunk allowed vlan 10,20,30,1000
+switchport trunk allowed vlan 20,30,40,1000
 end
 write memory
 ```
