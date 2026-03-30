@@ -183,3 +183,19 @@ copy running-config startup-config
 ```
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen05.png)
+
+
+Настроим удаленный доступ на всех узлах. Ниже настройка маршрутизатора R1:
+
+
+
+
+```
+username SSHadmin privelege 15 secret $cisco123
+ip domain-name ccna-lab.com 
+crypto key generate rsa           ''1024''
+line vty 0 4
+transport input ssh
+login local
+ip ssh version 2
+```
