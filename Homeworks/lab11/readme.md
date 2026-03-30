@@ -149,3 +149,37 @@ write memory
 
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen04.png)
+
+
+
+Настроим маршрутизацию между сетями VLAN. Ниже приведены настройки маршрутизатора и результаты проверки подинтерфейсов:
+
+
+
+```
+enable
+configure terminal
+interface g 0/0/1
+no shutdown
+interface g 0/0/1.20
+encapsulation dot1q 20
+ip address 10.20.0.1 255.255.255.0
+description Management
+interface g 0/0/1.30
+encapsulation dot1q 30
+ip address 10.30.0.1 255.255.255.0
+description Operations
+interface g 0/0/1.40
+encapsulation dot1q 40
+ip address 10.40.0.1 255.255.255.0
+description Sales
+interface g 0/0/1.1000
+encapsulation dot1q 1000 native
+no ip address
+interface Loopback 1
+ip address 172.16.1.1 255.255.255.0
+end
+copy running-config startup-config
+```
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen05.png)
