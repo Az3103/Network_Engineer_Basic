@@ -199,3 +199,4 @@ transport input ssh
 login local
 ip ssh version 2
 ```
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11.pkt)
