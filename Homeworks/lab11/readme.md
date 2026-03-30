@@ -42,3 +42,33 @@
 
 1. **Создание сети и настройка основных параметров устройства;**
 2. **Настройка и проверка списков расширенного контроля доступа;**
+
+
+
+
+### Решение:
+
+1. Создадим сеть согласно топологии. Укажем необходимую адресацию на ПК. Далее настроим основные параметры на маршрутизаторе и коммутаторах. Ниже пример настройки роутера:
+
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname R1
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER!  #
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+login local
+exit
+exit
+copy running-config startup-config
+```
