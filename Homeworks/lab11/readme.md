@@ -121,3 +121,31 @@ exit
 
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen03.png)
+
+
+
+
+
+3. Сконфигурируем магистральный канал между коммутаторами, а также магистральный канал до маршрутизатора. Ниже пример настроек коммутатора S1:
+
+
+```
+enable
+configure terminal
+interface f 0/1
+switchport mode trunk
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,30,1000
+end
+interface f 0/5
+switchport mode trunk
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,30,1000
+end
+write memory
+```
+
+Проверим правильность настроек командой show interfaces trunk:
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen04.png)
