@@ -72,3 +72,52 @@ exit
 exit
 copy running-config startup-config
 ```
+
+
+
+
+
+Настроим VLAN и назначим порты коммутаторов. Неиспользуемые порты отключим административно. Ниже пример настроек коммутатора S1:
+
+
+```
+enable
+configure terminal
+ip default-gateway 10.20.0.1
+vlan 20
+name Management
+exit
+vlan 30
+name Operations
+exit
+vlan 40
+name Sales
+exit
+vlan 999
+name Parking_Lot
+exit
+vlan 1000
+name Special
+exit
+interface vlan 20
+ip address 10.20.0.2 255.255.255.0
+no shutdown
+exit
+interface f 0/6
+switchport mode access
+switchport access vlan 30
+exit
+interface range f0/2-4, f0/7-24, g0/1-2
+switchport mode access
+switchport sccess vlan 999
+shutdown
+exit
+```
+
+
+Проверим правильность конфигураций командой show vlan brief:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen02.png)
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen03.png)
