@@ -224,4 +224,19 @@ ip access-group SSH_FROM_SALES in
 
 
 
+
+Политика 3. Ставится на маршрутизатор R1, субинтерфейс G 0/0/1.40
+
+```
+ip access-list extended ICMP_FROM_SALES
+deny icmp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 echo
+deny icmp 10.40.0.0 0.0.0.255 10.30.0.0 0.0.0.255 echo
+permit icmp any any
+interface g 0/0/1.40
+ip access-group ICMP_FROM_SALES in
+```
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen07.png)
+
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11.pkt)
