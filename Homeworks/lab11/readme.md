@@ -199,4 +199,29 @@ transport input ssh
 login local
 ip ssh version 2
 ```
+
+
+
+Для проверки https запросов в схему был добавлен сервер. Все запросы всех типов отработаны успешно.
+
+
+
+2. Настроим и проверим списки контроля доступа:
+
+
+
+Политика 1. Ставится на маршрутизатор R2.
+
+```
+ip access-list extended SSH_FROM_SALES
+deny tcp 10.40.0.0 0.0.0.255 10.20.0.0 0.0.0.255 eq 22
+permit any any
+interface g 0/0/1
+ip access-group SSH_FROM_SALES in
+```
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11_screen06.png)
+
+
+
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab11/lab11.pkt)
