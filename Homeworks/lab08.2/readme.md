@@ -14,13 +14,13 @@
 | ------------- |:------------------:| ----- | -----:| -----: |
 | R1     | G0/0/0    | 10.0.0.1 | 255.255.255.252 | - |
 |        | G0/0/1    | - | - |  |
-|        | G0/0/1.100      | 192.168.1.21  |  |  |         Clients
-|        | G0/0/1.200    | 192.168.1.101 |  |  |            Management
+|        | G0/0/1.100      | 192.168.1.1  | 255.255.255.128 |  |         ///Clients R1
+|        | G0/0/1.200    | 192.168.1.129 | 255.255.255.192 |  |            ///Management
 |        | G0/0/1.1000    | - | - |  |
-| R2   | G0/0      | 10.0.0.2  | 255.255.255.252 |  |
-|      | G0/0/1    |  |  |  |
-| S1     | VLAN 200    | 192.168.1.102  |  | 192.168.1.101 |
-| S2   | VLAN 1      | 192.168.1.201  |  |  | 
+| R2   | G0/0      | 10.0.0.2  | 255.255.255.252 | - |
+|      | G0/0/1    | 192.168.1.192 | 255.255.255.224 |  |               ///Clients R2
+| S1     | VLAN 200    |   |  |  |
+| S2   | VLAN 1      |   |  |  | 
 | PC-A     | NIC    | DHCP |DHCP | DHCP |
 | PC-B     | NIC    | DHCP | DHCP | DHCP |
 
@@ -79,15 +79,12 @@ enable
 configure terminal
 interface g 0/0/1
 no shutdown
-interface g 0/0/1.10
-encapsulation dot1q 10
-ip address 192.168.10.1 255.255.255.0
-interface g 0/0/1.20
-encapsulation dot1q 20
-ip address 192.168.20.1 255.255.255.0
-interface g 0/0/1.30
-encapsulation dot1q 30
-ip address 192.168.30.1 255.255.255.0
+interface g 0/0/1.100
+encapsulation dot1q 100
+ip address 192.168.1.1 255.255.255.128
+interface g 0/0/1.200
+encapsulation dot1q 200
+ip address 192.168.1.129 255.255.255.192
 interface g 0/0/1.1000
 encapsulation dot1q 1000 native
 no ip address
