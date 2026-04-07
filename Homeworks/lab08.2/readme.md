@@ -145,3 +145,31 @@ switchport trunk allowed vlan 100, 200, 1000
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2_screen06.png)
 
+
+
+
+
+
+
+
+2. Настроим и проверим два сервера DHCPv4 на R1:
+
+```
+ip dhcp excluded-address 192.168.1.1 192.168.1.5
+ip dhcp pool CLIENTS_R1
+network 192.168.1.0 255.255.255.128
+default-router 192.168.1.1
+domain-name CCNA-lab.com
+
+ip dhcp excluded-address 192.168.1.193 192.168.1.197
+ip dhcp pool CLIENTS_R2
+network 192.168.1.0 255.255.255.224
+default-router 192.168.1.193
+domain-name CCNA-lab.com
+
+```
+Проверим конфигурацию:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2_screen07.png)
+
+
