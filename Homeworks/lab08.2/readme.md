@@ -129,6 +129,10 @@ shutdown
 interface f 0/6
 switchport mode access
 switchport access vlan 100
+interface f 0/5
+switchport mode trunk
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 100, 200, 1000
 ```
 
 Проверим правильность настроек:
