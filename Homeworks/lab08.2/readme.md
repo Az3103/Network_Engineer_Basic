@@ -175,3 +175,16 @@ domain-name CCNA-lab.com
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2_screen08.png)
 
+
+
+
+
+
+3. Настроим и проверим DHCP-ретрансляцию на R2:
+
+```
+configure terminal
+interface g 0/0/1
+ip helper-address 10.0.0.1
+```
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2.pkt)
