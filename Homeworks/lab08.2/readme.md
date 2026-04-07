@@ -89,6 +89,9 @@ ip address 192.168.1.129 255.255.255.192
 interface g 0/0/1.1000
 encapsulation dot1q 1000 native
 no ip address
+interface g 0/0/0
+no shutdown
+ip address 10.0.0.1 255.255.255.252
 end
 copy running-config startup-config
 ```
