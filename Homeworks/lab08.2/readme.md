@@ -64,7 +64,6 @@ login
 line vty 0 15
 password cisco
 login
-transport input ssh
 exit
 exit
 copy running-config startup-config
