@@ -104,3 +104,35 @@ copy running-config startup-config
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2_screen04.png)
 
 
+Настроим базовые параметры коммутаторов аналогично с маршрутизаторами. Затем настроим VLAN:
+
+
+```
+enable
+configure terminal
+vlan 100
+name CLIENTS
+vlan 200
+name MANAGEMENT
+vlan 999
+name PARKING_LOT
+vlan 1000
+name SPECIAL
+interface VLAN 200
+ip address 192.168.1.130 255.255.255.192
+exit
+ip default-gateway 192.168.1.1
+interface range f 0/1-4, f 0/7-24, g 0/1-2
+switchport mode access
+switchport access vlan 999
+shutdown
+interface f 0/6
+switchport mode access
+switchport access vlan 100
+```
+
+Проверим правильность настроек:
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2_screen05.png)
+
