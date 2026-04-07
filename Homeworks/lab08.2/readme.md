@@ -81,9 +81,11 @@ interface g 0/0/1
 no shutdown
 interface g 0/0/1.100
 encapsulation dot1q 100
+description CLIENTS_R1
 ip address 192.168.1.1 255.255.255.128
 interface g 0/0/1.200
 encapsulation dot1q 200
+description MANAGEMENT_R1
 ip address 192.168.1.129 255.255.255.192
 interface g 0/0/1.1000
 encapsulation dot1q 1000 native
