@@ -97,3 +97,10 @@ ip route 0.0.0.0 0.0.0.0 10.0.0.2
 copy running-config startup-config
 ```
 
+Проверим статическую маршрутизацию:
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2_screen04.png)
+
+
