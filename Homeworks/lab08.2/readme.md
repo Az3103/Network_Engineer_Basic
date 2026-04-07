@@ -140,3 +140,8 @@ switchport trunk allowed vlan 100, 200, 1000
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2_screen05.png)
 
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab08.2/lab08.2_screen06.png)
+
