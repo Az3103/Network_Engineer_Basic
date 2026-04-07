@@ -93,6 +93,7 @@ interface g 0/0/0
 no shutdown
 ip address 10.0.0.1 255.255.255.252
 end
+ip route 0.0.0.0 0.0.0.0 10.0.0.2
 copy running-config startup-config
 ```
 
