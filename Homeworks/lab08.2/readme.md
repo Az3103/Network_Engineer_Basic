@@ -163,7 +163,7 @@ domain-name CCNA-lab.com
 
 ip dhcp excluded-address 192.168.1.193 192.168.1.197
 ip dhcp pool CLIENTS_R2
-network 192.168.1.0 255.255.255.224
+network 192.168.1.193 255.255.255.224
 default-router 192.168.1.193
 domain-name CCNA-lab.com
 
