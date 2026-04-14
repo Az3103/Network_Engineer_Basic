@@ -155,7 +155,7 @@ switchport trunk allowed vlan 100, 200, 1000
 2. Настроим и проверим два сервера DHCPv4 на R1:
 
 ```
-ip dhcp excluded-address 192.168.1.1 192.168.1.5
+ip dhcp excluded-address 192.168.1.1 192.168.1.10
 ip dhcp pool CLIENTS_R1
 network 192.168.1.0 255.255.255.128
 default-router 192.168.1.1
