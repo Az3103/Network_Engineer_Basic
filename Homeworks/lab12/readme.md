@@ -36,3 +36,39 @@
 
 
 ### Решение:
+
+
+
+1. Создадим сеть согласно топологии. Укажем необходимую адресацию на ПК. Далее настроим основные параметры на маршрутизаторе и коммутаторах. Ниже пример настройки роутера:
+
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname R2
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER!  #
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+interface g 0/0/0
+ip address 209.165.200.225 255.255.255.248
+no shutdown
+interface Lo1
+ip address 209.165.200.1 255.255.255.224
+no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 209.165.200.230
+exit
+copy running-config startup-config
+```
+
+
+2. 	Настройка и проверка NAT для IPv4.
