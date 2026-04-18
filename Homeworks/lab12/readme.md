@@ -71,4 +71,24 @@ copy running-config startup-config
 ```
 
 
-2. 	Настройка и проверка NAT для IPv4.
+2. 	Настройка и проверка NAT для IPv4. Настроим NAT на R1, используя пул из трех адресов 209.165.200.226-209.165.200.228:
+
+
+```
+enable
+configure terminal
+acces-list 1 permit 192.168.1.0 0.0.0.255
+ip nat pool PUBLIC_ACCESS 209.165.200.226 209.165.200.228 netmask 255.255.255.248
+ip nat inside source list 1 pool PUBLIC_ACCESS
+interface g 0/0/1
+ip nat inside
+interface g 0/0/0
+ip nat outside
+end
+show ip nat translations
+```
+После эхо-запросов получаем следующий результат:
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12_screen02.png "Топология")
+
