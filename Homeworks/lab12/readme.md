@@ -107,7 +107,30 @@ ip nat inside source list 1 pool PUBLIC_ACCESS overload
 exit
 show ip nat translations
 ```
+
+После одинарного эхо-запроса, через минуту статистика nat translations очищается и более не выводится в консоль.
+
 После запускаем пинг с параметром -t с обоих ПК. Команда show ip nat translations verbose не поддерживается. На R1 проверяем результат командой show ip nat translations:
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12_screen03.png "Топология")
+
+Затем очистим статистику и остановим пинг.
+
+Скорректируем настройки R1, вызвав перегрузку внешнего интерфейса:
+
+```
+enable
+configure terminal
+no ip nat inside source list 1 pool PUBLIC_ACCESS overload
+no ip nat pool PUBLIC_ACCESS
+ip nat inside source list 1 interface g 0/0/0 overload
+exit
+show ip nat translations
+```
+
+
+После запускаем пинг с параметром -t с обоих ПК. Команда ping repeat на коммутаторах не поддерживается. На R1 проверяем результат командой show ip nat translations:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12_screen04.png "Топология")
+
 
