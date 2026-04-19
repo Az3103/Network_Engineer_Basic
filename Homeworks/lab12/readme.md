@@ -146,5 +146,17 @@ ip nat inside source static 192.168.1.2 209.165.200.229
 exit
 show ip nat translations
 ```
+Проверим результаты настроек пингами и проверкой show ip nat translations.
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12_screen05.png "Топология")
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12_screen06.png "Топология")
+
+
+
+
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12.pkt)
+
 
 
