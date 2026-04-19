@@ -92,3 +92,22 @@ show ip nat translations
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12_screen02.png "Топология")
 
+
+При попытке пинговать с четвертого устройства подряд - попытка оказывается неудачной. Порядок устройств не важен. Никаких доп сообщений в консоли не выводится. Для корректных пингов с коммутаторов необходимо прописать ip default-gateway. На пк соответственно так же указываем шлюз.
+
+Обязательно очищаем трансляции командой - clear ip nat translations *. Команда clear ip nat statistics не поддерживается.
+
+3. Настройка и проверка PAT для IPv4. Ниже корректировка настроек на R1:
+
+```
+enable
+configure terminal
+no ip nat inside source list 1 pool PUBLIC_ACCESS
+ip nat inside source list 1 pool PUBLIC_ACCESS overload
+exit
+show ip nat translations
+```
+После запускаем пинг с параметром -t с обоих ПК. Команда show ip nat translations verbose не поддерживается. На R1 проверяем результат командой show ip nat translations:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12_screen03.png "Топология")
+
