@@ -134,3 +134,17 @@ show ip nat translations
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab12/lab12_screen04.png "Топология")
 
 
+После - очистим статистику преобразований командой clear ip nat translations *
+
+
+4. Настройка и проверка статического NAT для IPv4. Настроим статическое сопоставление:
+
+```
+enable
+configure terminal
+ip nat inside source static 192.168.1.2 209.165.200.229
+exit
+show ip nat translations
+```
+
+
