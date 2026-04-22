@@ -36,4 +36,47 @@
 
 
 
-1.
+1. Настроим основные параметры устройств:
+
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname R1
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER!  #
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+exit
+interface g 0/0/1
+ip address 10.22.0.1 255.255.255.0
+no shutdown
+interface Loopback1
+ip address 172.16.1.1 255.255.255.0
+exit
+exit
+copy running-config startup-config
+```
+
+
+2. Обнаружение сетевых ресурсов с помощью протокола CDP. Проверим информацию касательно CDP на маршрутизаторе, также определим версию IOS на коммутаторе S1:
+
+```
+show cdp interface
+show cdp neighbors
+show cdp entry S1
+```
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab13/lab13_screen02.png "Топология")
+
+
+
+
