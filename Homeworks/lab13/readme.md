@@ -77,6 +77,14 @@ show cdp entry S1
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab13/lab13_screen02.png "Топология")
 
+Интерфейсы CDP и версия операционной системы коммутатора видны на скриншоте выше. Теперь проверим выданные пакеты CDP с коммутатора S1:
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab13/lab13_screen03.png "Топология")
+
+
+
+
+
 
 
 
