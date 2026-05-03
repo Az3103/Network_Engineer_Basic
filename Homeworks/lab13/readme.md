@@ -109,7 +109,40 @@ show lldp entry S2
 
 
 
+4. 	Настройте главный сервер NTP. Настроим R1 в качестве хозяина NTP:
 
+
+```
+show clock
+clock set 10:07:00 3 May 2026
+configure terminal
+ntp master 4
+```
+
+Последующая проверка выводит верный результат - 10:13:41.905 UTC Sun May 3 2026.
+
+Проверка времени на коммутаторах выводит результат - *0:33:29.677 UTC Mon Mar 1 1993.
+
+
+Настроим коммутаторы в качестве клиентов NTP:
+
+
+```
+ntp server 10.22.0.1 
+```
+
+Команда ntp update-calendar не поддерживается. Проверим результаты на коммутаторах соответствующей командой:
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab13/lab13_screen06.png "Топология")
+
+
+
+
+
+
+
+Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab13/lab13.pkt)
 
 
 
