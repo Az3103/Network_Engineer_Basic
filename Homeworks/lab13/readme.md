@@ -89,8 +89,22 @@ show cdp entry S1
 
 
 
+Включим протокол на всех устройствах командой - lldp run. Запросим информацию с S1 о S2:
 
 
+```
+show lldp entry S2
+```
+
+
+Поддерживается только команда show lldp neigbors. Ниже приведены ее результаты:
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab13/lab13_screen03.png "Топология")
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab13/lab13_screen04.png "Топология")
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/lab13/lab13_screen05.png "Топология")
 
 
 
