@@ -284,4 +284,40 @@ show ip nat translations
 
 
 
+
+
+
+
+
+11. Настроим роутер как NTP-сервер. Остальные узлы будут ориентироваться на него и вышестоящие узлы.
+
+
+
+```
+show clock
+clock set 10:07:00 3 May 2026
+configure terminal
+ntp master 4
+```
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen11.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project.pkt)
