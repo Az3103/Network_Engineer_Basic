@@ -164,5 +164,18 @@ exit
 
 
 
+5. Протокол STP оставлен включеным по умолчанию. Немного скорректированы приоритеты во избежание колец. Ниже статистика spanning tree по коммутатору третьего кровня:
+
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen04.png)
+
+
+
+
+
+
+
 
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project.pkt)
