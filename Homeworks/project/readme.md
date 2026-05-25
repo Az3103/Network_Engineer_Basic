@@ -101,4 +101,68 @@ login local
 
 
 
+4. Настроим межвлановую маршрутизацию на L3 коммутаторах. Настроим каждый задействованный порт в режим Ассеss либо Trunk. Неиспользуемые порты переводятся в 999 Vlan и административно отключаются.
+
+
+```
+enable
+configure terminal
+vlan 100
+name SALES
+exit
+vlan 200
+name MANAGEMENT
+exit
+vlan 300
+name SERVERS
+exit
+vlan 999
+name EMPTY
+exit
+vlan 1000
+name NATIVE
+exit
+interface vlan 100
+ip address 192.168.0.2 255.255.255.192
+no shutdown
+exit
+interface vlan 200
+ip address 192.168.0.66 255.255.255.192
+no shutdown
+exit
+interface vlan 300
+ip address 192.168.0.130 255.255.255.224
+no shutdown
+exit
+interface f0/11
+switchport mode access
+switchport access vlan 100
+exit
+interface f 0/12
+switchport mode access
+switchport access vlan 200
+exit
+interface f 0/13
+switchport mode access
+switchport access vlan 300
+exit
+interface range f0/4-10, f0/14-24, g0/2
+switchport mode access
+switchport access vlan 999
+shutdown
+interface port-channel 1
+switchport mode trunk
+switchport trunk native vlan 1000
+switchport trunk allowed vlan 10,20,30,1000
+end
+exit
+```
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen03.png)
+
+
+
+
+
+
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project.pkt)
