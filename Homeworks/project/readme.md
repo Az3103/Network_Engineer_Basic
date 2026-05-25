@@ -268,13 +268,19 @@ ip access-group NO_TRAFFIC in
 
 
 
-10. Настроим на роутере статический NAT. Сделаем это на примере серверов, которым как правило нужны статические адреса.
+10. Настроим на роутере статический NAT. Сделаем это на примере серверов, которым как правило нужны статические адреса. Другие виды натирования нереализуемы в Пакет Трейсер через Loopback на роутере.
 
 
+```
+enable
+configure terminal
+ip nat inside source static 192.168.0.140 10.40.0.1
+exit
+show ip nat translations
+```
 
 
-
-
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen10.png)
 
 
 
