@@ -41,6 +41,64 @@
 
 
 
+###  Задачи:
+
+Создание сети согласно топологии и отработка пройденных в ходе курса технологий.
+
+
+
+
+###  Решение:
+
+1. Создадим сеть согласно топологии. Назначим адресацию оконечных устройств. Далее пропишем основные параметры сетевых устройств:
+
+
+```
+enable
+configure terminal
+no ip domain-lookup
+hostname R1
+service password-encryption
+enable secret class
+banner motd #
+DO NOT ENTER!  #
+line console 0
+logging synchronous
+password cisco
+login
+line vty 0 15
+password cisco
+login
+exit
+exit
+copy running-config startup-config
+```
+
+
+
+2. Наша сеть разбита на 5 подсетей. Первые три предназначены для подключения различных устройств - ПК и серверов. Остальные две служат для выхода в интернет. На схеме прописаны соответствующие подсети и маски. Зададим адресацию согласно схемы и таблицы адресов. Обязательно укажем шлюзвы по умолчанию там, где это нужно.
+
+
+
+
+3. Создадим привилигерованного пользователя с паролем для удаленного и безопасного доступа ко всем устройствам:
+
+```
+ip domain-name bobr.com
+username admin privilege 15 secret password
+crypto key generate rsa
+ip ssh version 2
+line vty 0 15
+transport input ssh
+login local
+```
+
+Попробуем получить доступ через SSH Client к коммутатору MASTER_SWITCH2 c помощью привилигерованного пользователя:
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen02.png)
+
+
 
 
 Файл с настройками из PacketTracer находится [здесь](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project.pkt)
