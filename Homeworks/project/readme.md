@@ -243,12 +243,25 @@ no passive-interface GigabitEthernet0/1
 
 
 
+9. Пропишем расширенные списки контроля доступа на виртуальные нитерфейсы коммутаторов L3. Ограничим сегментам продаж и менеджмента доступ к работе друг друга. Однако доступ к внутренним серверам и интернету у них остается.
 
 
 
+```
+ip access-list extended NO_TRAFFIC
+deny ip 192.168.0.0 0.0.0.63 192.168.0.64 0.0.0.63
+deny ip 192.168.0.64 0.0.0.63 192.168.0.0 0.0.0.63
+permit ip any any
+exit
+interface vlan 100
+ip access-group NO_TRAFFIC in
+```
 
 
 
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen08.png)
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen09.png)
 
 
 
