@@ -193,6 +193,32 @@ dns-server 192.168.0.139 255.255.255.224
 
 
 
+7. Реализуем безопасность портов на коммутаторах доступа. Ранее мы отключили административно неиспользуемые порты. Будем работать с подключенными. Также включаем spanning-tree portfast и BPDU guard:
+
+
+
+```
+enable
+configure terminal
+interface f 0/3
+switchport port-security
+switchport port-security maximum 3
+switchport port-security violation restrict
+switchport port-security aging time 60
+switchport port-security mac-address sticky
+spanning-tree portfast
+spanning-tree bpduguard enable
+```
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen06.png)
+
+
+
+
+
+
 
 
 
