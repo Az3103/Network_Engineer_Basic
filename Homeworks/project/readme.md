@@ -175,6 +175,27 @@ exit
 
 
 
+6. Организуем DHCP сервер с тремя пулами, по одному для каждой подсети оборудования. Исключаем первые 15 адресов в пулах. Далее на схеме подключим по узлу в каждый коммутатор доступа и убедимся в правильности работы сервера.
+
+```
+ip dhcp excluded-address 192.168.0.1 192.168.0.15
+ip dhcp pool SALES_POOL
+network 192.168.0.0 255.255.255.192
+default-router 192.168.0.1
+dns-server 192.168.0.139 255.255.255.224
+```
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen05.png)
+
+
+
+
+
+
+
+
 
 
 
