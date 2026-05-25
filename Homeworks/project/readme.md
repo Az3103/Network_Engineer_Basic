@@ -172,7 +172,7 @@ exit
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen04.png)
 
 
-
+Между коммутаторами третьего уровня организована магистраль путем обьединения трех линков в port-channel.
 
 
 6. Организуем DHCP сервер с тремя пулами, по одному для каждой подсети оборудования. Исключаем первые 15 адресов в пулах. Далее на схеме подключим по узлу в каждый коммутатор доступа и убедимся в правильности работы сервера.
@@ -213,6 +213,37 @@ spanning-tree bpduguard enable
 
 
 ![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen06.png)
+
+
+
+
+
+8. Организуем OSPF между роутером к провайдеру и коммутаторами распределения. В нашем случаем протокол обеспечивает связность с Loopback-интерфейсом роутера. Соответственно все узлы могут выходить в интернет.
+
+
+
+```
+router ospf 1
+router-id 1.1.1.1
+network 192.168.0.0 0.0.0.63 area 0
+network 192.168.0.64 0.0.0.63 area 0
+network 192.168.0.128 0.0.0.31 area 0
+passive-interface default
+no passive-interface GigabitEthernet0/0
+no passive-interface GigabitEthernet0/1
+```
+
+
+
+![alt-текст](https://github.com/Az3103/Network_Engineer_Basic/blob/main/Homeworks/project/project_screen07.png)
+
+
+
+
+
+
+
+
 
 
 
